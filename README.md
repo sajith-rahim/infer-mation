@@ -1,6 +1,6 @@
 # Infer-mation
 
-<img align="right" style="float:right;border:1px solid black" width=100 height=100 src="https://raw.githubusercontent.com/sajith-rahim/cdn/main/content/blog/media/poc_tag.png" />
+<img align="right" style="float:right;border:1px solid black" width=150 height=150 src="https://raw.githubusercontent.com/sajith-rahim/cdn/main/content/blog/media/poc_tag.png" />
 
 *Infer model schema from CSV/Excel files.*
 
