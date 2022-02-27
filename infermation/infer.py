@@ -1,4 +1,3 @@
-import pandas as pd
 
 import dateutil
 from collections import Counter
@@ -7,7 +6,7 @@ from infermation.dtypes import dtypes, teradata_dtypes_map
 from infermation.type_utils import cleanse, is_nan_numeric
 from utils import Logger
 
-from prettytable import PrettyTable
+
 
 
 def infer_by_casting(val_in_string):
@@ -161,21 +160,21 @@ def infer(df):
     return db_type_map
 
 
-if __name__ == "__main__":
-    Logger.set_logger()
-    logger = Logger.get_logger()
-    logger.info("Starting..")
-    df = pd.read_csv("../data/RL1.csv")
-    print(df.head(3))
-
-    db_type_map = infer(df)
-
-
-
-    # Specify the Column Names while initializing the Table
-    table = PrettyTable(["Attribute Name", "Data Type"])
-    for attr in db_type_map:
-
-        table.add_row([attr['colname'],attr['type']])
-
-    print(table)
+# if __name__ == "__main__":
+#     Logger.set_logger()
+#     logger = Logger.get_logger()
+#     logger.info("Starting..")
+#     df = pd.read_csv("../data/RL1.csv")
+#     print(df.head(3))
+#
+#     db_type_map = infer(df)
+#
+#
+#
+#     # Specify the Column Names while initializing the Table
+#     table = PrettyTable(["Attribute Name", "Data Type"])
+#     for attr in db_type_map:
+#
+#         table.add_row([attr['colname'],attr['type']])
+#
+#     print(table)
